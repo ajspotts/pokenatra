@@ -1,0 +1,13 @@
+<h2>Characteristics of your Pokemon</h2>
+<div class="pokemon">
+  <p>Name <%= @pokemons.name %></p>
+  <p>Combat Points <%= @pokemons.cp %></p>
+  <p>Type <%= @pokemons.poke_type %></p>
+  <img src="<%= @pokemons.img_url %>">
+</div>
+
+<form action ="/pokemon/<%=@pokemons.id%>" method = "post">
+ <input type ="hidden" name ="_method" value = "delete">
+
+<button type ="submit">Delete</button>
+</form>
